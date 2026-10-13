@@ -1,7 +1,7 @@
 import re
 from playwright.sync_api import Page, expect
 
-URL_LOGIN = "http://10.21.54.164:8081/vista/"
+URL_LOGIN = "http://localhost:8081/vista/"
 
 # FUNCIÓN AUXILIAR (Se ejecuta antes de cada prueba)
 # ==========================================

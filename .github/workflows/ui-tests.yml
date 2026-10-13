@@ -12,6 +12,18 @@ jobs:
     - name: Descargar el repositorio
       uses: actions/checkout@v3
 
+    - name: Configurar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Instalar Newman
+      run: npm install -g newman
+
+    - name: Ejecutar pruebas de API
+      run: newman run pruebas_puentodeventa.json
+      continue-on-error: true
+
     - name: Configurar Python
       uses: actions/setup-python@v4
       with:
